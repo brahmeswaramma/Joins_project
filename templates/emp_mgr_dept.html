@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Emp_Mgr_Dept</h1>
+        <table border="3px">
+            <tr>
+                <th>Emp_dept_no</th>
+                <th>Emp_Name</th>
+                <th>Job</th>
+                <th>Mgr_name</th>
+                <th>Dept_Name</th>
+                <th>Mgr_Salary</th>
+                <th>Emp_Sal</th>
+                <th>Dept_Location</th>
+                <th>Mgr_Dept_No</th>
+                <th>Mgr_Location</th>
+                
+            </tr>
+            {% for i in EMDO %}
+            <tr>
+                <td>{{i.dept_no.dept_no}}</td>
+                <td>{{i.emp_name}}</td>
+                <td>{{i.job}}</td>
+                <td>{{i.mgr.emp_name}}</td>
+                <td>{{i.dept_no.dept_name}}</td>
+                <td>{{i.mgr.sal}}</td>
+                <td>{{i.sal}}</td>
+                <td>{{i.dept_no.dept_location}}</td>
+                <td>{{i.mgr.dept_no.dept_no}}</td>
+                <td>{{i.mgr.dept_no.dept_location}}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
